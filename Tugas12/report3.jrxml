@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="06f82531-c0ff-408f-af73-262a94b7767a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from skripsi]]>
+	</queryString>
+	<field name="idskripsi" class="java.lang.String"/>
+	<field name="judul" class="java.lang.String"/>
+	<field name="pengarang" class="java.lang.String"/>
+	<field name="tahun" class="java.lang.String"/>
+	<field name="halaman" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="75" y="0" width="424" height="60" uuid="f3ee566e-4136-4e3c-8013-975ab1b8ff67"/>
+				<textElement>
+					<font fontName="Times New Roman" size="48" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SKRIPSI REPORT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="483" y="0" width="100" height="20" uuid="0d468342-f8d6-4290-801b-ca6da2f9b4b9"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="41" width="100" height="20" uuid="426d0939-0fcd-45b9-a3ad-0804d22f7b27"/>
+				<text><![CDATA[ID SKRIPSI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="118" y="41" width="100" height="20" uuid="77437980-5374-47e4-a6d2-736fe8497f8d"/>
+				<text><![CDATA[JUDUL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="41" width="100" height="20" uuid="dcb1076d-ccc2-4676-9140-d59548503d78"/>
+				<text><![CDATA[PENGARANG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="41" width="100" height="20" uuid="428668b3-d3d0-414a-a283-7605d535c704"/>
+				<text><![CDATA[TAHUN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="41" width="100" height="20" uuid="f36e7d54-f90c-481d-be9f-a288a3025f2a"/>
+				<text><![CDATA[HALAMAN]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="48" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="17" width="100" height="20" uuid="6fa1baa8-e65a-4cbe-a264-4f6f3982df0e"/>
+				<textFieldExpression><![CDATA[$F{idskripsi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="17" width="100" height="20" uuid="d41f8770-510e-4446-b7c3-9b047394682e"/>
+				<textFieldExpression><![CDATA[$F{judul}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="17" width="100" height="20" uuid="198c156d-c187-49d5-8f29-4f31e8aecaa3"/>
+				<textFieldExpression><![CDATA[$F{halaman}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="341" y="17" width="100" height="20" uuid="ec8521b6-5352-4eb8-ae83-7af731510cd2"/>
+				<textFieldExpression><![CDATA[$F{tahun}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="17" width="100" height="20" uuid="d734a3ce-4dd4-4907-80fa-f00891340116"/>
+				<textFieldExpression><![CDATA[$F{pengarang}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="5" y="11" width="100" height="20" uuid="6b2184f4-3435-4dd3-87e0-769b05b6e313"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="441" y="9" width="80" height="20" uuid="8d2024b0-cddc-41be-afac-7ddec9c69a40"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="521" y="9" width="40" height="20" uuid="b8c71d2e-aa43-4d2f-bce9-d399a6da2616"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="87c5125b-d54a-4f4b-8bbd-0bff29865d75">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="isbn" class="java.lang.String"/>
+	<parameter name="pengarang" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from buku 
+where pengarang =$P{pengarang}]]>
+	</queryString>
+	<field name="idbuku" class="java.lang.String"/>
+	<field name="isbn" class="java.lang.String"/>
+	<field name="judul" class="java.lang.String"/>
+	<field name="subjudul" class="java.lang.String"/>
+	<field name="pengarang" class="java.lang.String"/>
+	<field name="penerbit" class="java.lang.String"/>
+	<field name="tahun" class="java.lang.String"/>
+	<field name="jumlahhalaman" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="88" splitType="Stretch">
+			<staticText>
+				<reportElement x="100" y="12" width="386" height="60" uuid="e5d9e0b7-f352-47f3-a625-48dda735fdc5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="48"/>
+				</textElement>
+				<text><![CDATA[BOOK REPORT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="455" y="0" width="100" height="20" uuid="9bf88245-f853-4b06-8827-534a07096673"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="41" width="57" height="20" uuid="7722265b-0bab-4840-bb8e-9bb482ed6e21"/>
+				<text><![CDATA[ID BUKU]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="73" y="41" width="47" height="20" uuid="091ac4f3-a31a-4f72-a52d-2fc44f4a3f66"/>
+				<text><![CDATA[ISBN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="41" width="49" height="20" uuid="fbbf1a07-db5f-4f7b-975a-5a49e408dabc"/>
+				<text><![CDATA[JUDUL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="41" width="59" height="20" uuid="cef66a9c-7635-40c2-baa0-bf4c7612df62"/>
+				<text><![CDATA[SUBJUDUL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="255" y="41" width="68" height="20" uuid="ba5e29b5-25d6-4394-9d06-5b031452a71d"/>
+				<text><![CDATA[PENGARANG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="337" y="41" width="63" height="20" uuid="0a9f91fc-fa3b-4d5e-9b81-4f02bc9142ba"/>
+				<text><![CDATA[PENERBIT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="41" width="54" height="20" uuid="ec381c2e-d4dc-4764-926d-4d54c3677388"/>
+				<text><![CDATA[TAHUN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="484" y="41" width="71" height="20" uuid="7f33cddd-e6cb-490a-abaf-16addc31d3d6"/>
+				<text><![CDATA[HALAMAN]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="4" y="10" width="53" height="20" uuid="2faa716a-dfe1-4f95-a5a0-369efb1652e1"/>
+				<textFieldExpression><![CDATA[$F{idbuku}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="73" y="10" width="47" height="20" uuid="75c7015d-3024-4df4-823b-78b7cb4097f4"/>
+				<textFieldExpression><![CDATA[$F{isbn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="10" width="49" height="20" uuid="1f0eec0b-9ab3-4b09-acab-8ea0fd8aae6c"/>
+				<textFieldExpression><![CDATA[$F{judul}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="10" width="59" height="20" uuid="884fea99-2ace-47d2-9936-588985d32b7a"/>
+				<textFieldExpression><![CDATA[$F{subjudul}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="337" y="10" width="63" height="20" uuid="bac2bba6-5fad-407e-9424-c033d723be94"/>
+				<textFieldExpression><![CDATA[$F{penerbit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="486" y="10" width="71" height="20" uuid="0bffe55f-c915-48f5-b277-4103e4de7709"/>
+				<textFieldExpression><![CDATA[$F{jumlahhalaman}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="413" y="10" width="54" height="20" uuid="2707a598-f7ea-49a4-a993-9b25c978f215"/>
+				<textFieldExpression><![CDATA[$F{tahun}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="255" y="10" width="68" height="20" uuid="f845d56d-5d79-43fc-9a9d-be3b9b2c5c3a"/>
+				<textFieldExpression><![CDATA[$F{pengarang}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="4" y="0" width="100" height="20" uuid="4f86ccca-e3e7-4fc9-af62-c631a0ee7a2b"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="413" y="4" width="80" height="20" uuid="595f0b60-e2c7-462c-ad86-f4bb743685d1"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="493" y="4" width="40" height="20" uuid="675fae38-f7c9-481e-b1a9-2c1c16d7d7b1"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
