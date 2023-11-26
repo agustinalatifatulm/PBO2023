@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b8cba616-f299-4a36-82ab-d31395efc924">
+	<property name="ireport.zoom" value="0.9090909090909091"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="querySearch" class="java.lang.String"/>
+	<parameter name="searchBy" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from peminjaman]]>
+	</queryString>
+	<field name="idpeminjaman" class="java.lang.String"/>
+	<field name="nama" class="java.lang.String"/>
+	<field name="nim" class="java.lang.String"/>
+	<field name="prodi" class="java.lang.String"/>
+	<field name="tanggalpinjam" class="java.util.Date"/>
+	<field name="tanggalkembali" class="java.util.Date"/>
+	<field name="judulbuku" class="java.lang.String"/>
+	<field name="angkatan" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="271" y="15" width="288" height="36" uuid="899f69c5-aafd-49bc-a50a-78a18babf86d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEMINJAMAN REPORT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="21" y="0" width="460" height="20" uuid="b38061a5-184e-4a82-8d18-a3fbed99a844"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["hasil pencarian dari " + $P{querySearch} +" berdasarkan pada kolom " + $P{searchBy} +" hasilnya adalah:"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="21" width="100" height="20" uuid="3be02977-f8d0-4db2-af27-f8848c4b2832"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="21" width="100" height="20" uuid="d8bbc904-0a8d-4865-b4b6-d371c9cb1ad8"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="21" width="100" height="20" uuid="78c56da8-90e7-46cf-840f-5b3460864d95"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="21" width="100" height="20" uuid="624c3558-b872-425d-bb2f-783c0daeef93"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRODI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="21" width="100" height="20" uuid="4b6bc651-2b35-488e-9bf0-b2ed2ef396d0"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TGL PINJAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="21" width="100" height="20" uuid="3626434b-edd9-4be3-a3b4-0e76e4151acf"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TGL KEMBALI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="600" y="21" width="100" height="20" uuid="c3a7b47a-ec6b-466f-8c99-b211f620d2bb"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUDUL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="702" y="21" width="100" height="20" uuid="2e395455-75f0-438d-bc32-52e406aa39ec"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ANGKATAN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="51" width="802" height="1" uuid="e028b650-68e7-4ddb-8f5f-9b3cbfd7f310"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="11" width="100" height="20" uuid="ede0ca68-2558-44a1-b342-f32b8013376d"/>
+				<textFieldExpression><![CDATA[$F{idpeminjaman}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="11" width="100" height="20" uuid="3836d786-288d-4c65-8dc8-27e7c92e9baf"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="11" width="100" height="20" uuid="75380d1d-5e2e-4882-b6e6-5542aae57e0d"/>
+				<textFieldExpression><![CDATA[$F{nim}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="11" width="100" height="20" uuid="c993e484-60e1-4703-99b1-130513ebb197"/>
+				<textFieldExpression><![CDATA[$F{prodi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="600" y="11" width="100" height="20" uuid="7d42d573-8761-45ad-a0bc-eab54d864937"/>
+				<textFieldExpression><![CDATA[$F{judulbuku}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="702" y="11" width="100" height="20" uuid="7b9c164e-7e42-42eb-8133-667b29c0365f"/>
+				<textFieldExpression><![CDATA[$F{angkatan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="11" width="100" height="20" uuid="89cc5bc8-c6c7-4df7-8205-13f7808c2833"/>
+				<textFieldExpression><![CDATA[$F{tanggalpinjam}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="11" width="100" height="20" uuid="da1fbee5-210d-4792-be4e-36e1ed271837"/>
+				<textFieldExpression><![CDATA[$F{tanggalkembali}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="700" y="0" width="100" height="20" uuid="6ae4ae45-526b-4e54-9f69-63eaec64ad10"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="646" y="31" width="80" height="20" uuid="b80c047b-fac5-4193-824d-664b9e9af3fc"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="726" y="31" width="40" height="20" uuid="fedca775-a6f3-421d-b0f3-c43aaa0e5942"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

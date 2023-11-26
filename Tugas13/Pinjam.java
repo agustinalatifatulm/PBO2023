@@ -1,0 +1,624 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
+package view;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import static java.lang.String.format;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import static java.text.MessageFormat.format;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.Timer;
+import javax.swing.table.DefaultTableModel;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperPrintManager;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
+import net.sf.jasperreports.engine.design.JasperDesign;
+import net.sf.jasperreports.engine.xml.JRXmlLoader;
+import net.sf.jasperreports.view.JasperViewer;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
+import uas.Peminjaman;
+
+/**
+ *
+ * @author HP
+ */
+public class Pinjam extends javax.swing.JFrame {
+    
+    private Timer refreshTimer;
+    
+    private Connection conn;
+    
+    public void peringatan(String pesan) {
+        JOptionPane.showMessageDialog(rootPane, pesan);
+    }
+    ArrayList<Peminjaman> peminjaman;
+
+    /**
+     * Creates new form Pinjam
+     */
+    private void tampil() {
+        EntityManager entityManager = Persistence.createEntityManagerFactory("UASPU").createEntityManager();
+        entityManager.getTransaction().begin();
+        TypedQuery<Peminjaman> querySelectAll = entityManager.createNamedQuery("Peminjaman.findAll", Peminjaman.class);
+        List<Peminjaman> results = querySelectAll.getResultList();
+        
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        model.setRowCount(0);
+        for (Peminjaman data : results) {
+            Object[] baris = new Object[8];
+            baris[0] = data.getIdpeminjaman();
+            baris[1] = data.getNama();
+            baris[2] = data.getNim();
+            baris[3] = data.getProdi();
+            baris[4] = data.getTanggalpinjam();
+            baris[5] = data.getTanggalkembali();
+            baris[6] = data.getJudulbuku();
+            baris[7] = data.getAngkatan();
+            
+            
+            model.addRow(baris);
+        }
+        entityManager.getTransaction().commit();
+        entityManager.close();
+    }
+
+    private void kosongkan_form() {
+        jTextFieldid.setEditable(true);
+        jTextFieldid.setText(null);
+        jTextFieldnama.setText(null);
+        jTextFieldnim.setText(null);
+        jTextFieldprodi.setText(null);
+        jDatepinjam.setDate(null);
+        jDatekembali.setDate(null);
+        jTextFieldjudul.setText(null);
+        jTextFieldangkatan.setText(null);
+        
+    }
+    
+    public Pinjam() {
+        try {
+            peminjaman = new ArrayList<>();
+            initComponents();
+            Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5433/Perpustakaan", "postgres", "1183");
+            tampil();
+            // Membuat dan mengatur timer untuk auto-refresh setiap 5 detik (5000 milidetik)
+            refreshTimer = new Timer(5000, new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    tampil();
+                }
+            });
+            refreshTimer.start();
+            tampil();
+        } catch (SQLException ex) {
+            Logger.getLogger(Pinjam.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jTextFieldid = new javax.swing.JTextField();
+        jTextFieldnama = new javax.swing.JTextField();
+        jTextFieldnim = new javax.swing.JTextField();
+        jTextFieldprodi = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jTextFieldjudul = new javax.swing.JTextField();
+        jDatepinjam = new com.toedter.calendar.JDateChooser();
+        jDatekembali = new com.toedter.calendar.JDateChooser();
+        jLabel9 = new javax.swing.JLabel();
+        jTextFieldangkatan = new javax.swing.JTextField();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/q.png"))); // NOI18N
+
+        jPanel2.setBackground(new java.awt.Color(0, 204, 204));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 9, Short.MAX_VALUE)
+        );
+
+        jPanel3.setBackground(new java.awt.Color(0, 153, 153));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 17, Short.MAX_VALUE)
+        );
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID PEMINJAMAN", "NAMA", "NIM", "PRODI", "Tanggal Pinjam", "Tanggal Kembali", "JUDUL", "ANGKATAN"
+            }
+        ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+
+        jLabel2.setText("ID PEMINJAMAN");
+
+        jLabel3.setText("NAMA");
+
+        jLabel4.setText("NIM");
+
+        jLabel5.setText("PRODI");
+
+        jLabel6.setText("Tanggal Pinjam");
+
+        jLabel7.setText("Tanggal Kembali");
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jTextFieldid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldidActionPerformed(evt);
+            }
+        });
+
+        jTextFieldnim.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldnimActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("jButton2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("jButton3");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setText("JUDUL BUKU");
+
+        jTextFieldjudul.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldjudulActionPerformed(evt);
+            }
+        });
+
+        jDatepinjam.setDateFormatString("yyyy MM dd");
+
+        jDatekembali.setDateFormatString("yyyy MM dd");
+
+        jLabel9.setText("ANGKATAN");
+
+        jTextFieldangkatan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldangkatanActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jLabel1)
+                .addContainerGap(931, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addGap(80, 80, 80))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel9))
+                .addGap(67, 67, 67)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextFieldid)
+                    .addComponent(jTextFieldnama)
+                    .addComponent(jTextFieldnim)
+                    .addComponent(jTextFieldprodi, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                    .addComponent(jTextFieldangkatan))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8))
+                        .addGap(43, 43, 43)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextFieldjudul, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
+                            .addComponent(jDatepinjam, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jDatekembali, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addGap(53, 53, 53)
+                        .addComponent(jButton2)
+                        .addGap(44, 44, 44)
+                        .addComponent(jButton3)
+                        .addGap(203, 203, 203))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(jTextFieldid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8)
+                            .addComponent(jTextFieldjudul, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel3)
+                                .addComponent(jTextFieldnama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel6))
+                            .addComponent(jDatepinjam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(jTextFieldnim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7)))
+                    .addComponent(jDatekembali, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jTextFieldprodi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3)
+                    .addComponent(jButton2)
+                    .addComponent(jButton1))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(jTextFieldangkatan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(68, 68, 68)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void jTextFieldidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldidActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+
+        String idpeminjaman = jTextFieldid.getText();
+        String nama = jTextFieldnama.getText();
+        String nim = jTextFieldnim.getText();
+        String prodi = jTextFieldprodi.getText();
+        String judulbuku = jTextFieldjudul.getText();
+        String angkatan = jTextFieldangkatan.getText();
+
+// awal persistence
+        EntityManager entityManager = Persistence.createEntityManagerFactory("UASPU").createEntityManager();
+        entityManager.getTransaction().begin();
+        
+        Peminjaman p = new Peminjaman();
+        
+        Date datePeminjaman = jDatepinjam.getDate(); // Ambil langsung Date dari JDateChooser
+        Date dateKembali = jDatekembali.getDate(); // Ambil langsung Date dari JDateChooser
+
+// Set tanggal peminjaman buku
+        p.setTanggalpinjam(datePeminjaman);
+        p.setTanggalkembali(dateKembali);
+        
+        p.setIdpeminjaman(idpeminjaman);
+        p.setJudulbuku(judulbuku);
+        p.setNama(nama);
+        p.setNim(nim);
+        p.setProdi(prodi);
+        p.setAngkatan(angkatan);
+        
+        entityManager.persist(p);
+        
+        entityManager.getTransaction().commit();
+// akhir persistence
+
+// Membersihkan nilai dari komponen GUI
+        jTextFieldid.setText("");
+        jTextFieldnama.setText("");
+        jTextFieldnim.setText("");
+        jTextFieldprodi.setText("");
+        jDatepinjam.setDate(null);
+        jDatekembali.setDate(null);
+        jTextFieldjudul.setText("");
+        jTextFieldangkatan.setText("");
+        
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextFieldnimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldnimActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldnimActionPerformed
+
+    private void jTextFieldjudulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldjudulActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldjudulActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+
+        String idpeminjaman = jTextFieldid.getText();
+        String nama = jTextFieldnama.getText();
+        String nim = jTextFieldnim.getText();
+        String prodi = jTextFieldprodi.getText();
+        String judulbuku = jTextFieldjudul.getText();
+        String angkatan= jTextFieldangkatan.getText();
+
+// awal persistence
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("UASPU");
+        EntityManager em = emf.createEntityManager();
+        Peminjaman p = new Peminjaman();
+        
+        Date datePeminjaman = jDatepinjam.getDate(); // Ambil langsung Date dari JDateChooser
+        Date dateKembali = jDatekembali.getDate(); // Ambil langsung Date dari JDateChooser
+
+// Set tanggal peminjaman buku
+        p.setTanggalpinjam(datePeminjaman);
+        p.setTanggalkembali(dateKembali);
+        
+        p.setIdpeminjaman(idpeminjaman);
+        p.setJudulbuku(judulbuku);
+        p.setNama(nama);
+        p.setNim(nim);
+        p.setProdi(prodi);
+        p.setAngkatan(angkatan);
+        
+        em.getTransaction().begin();
+        em.merge(p);
+        em.getTransaction().commit();
+// akhir persistence
+
+// Membersihkan nilai dari komponen GUI
+        jTextFieldid.setText("");
+        jTextFieldnama.setText("");
+        jTextFieldnim.setText("");
+        jTextFieldprodi.setText("");
+        jDatepinjam.setDate(null);
+        jDatekembali.setDate(null);
+        jTextFieldjudul.setText("");
+        jTextFieldangkatan.setText("");
+        
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:
+        int baris = jTable1.rowAtPoint(evt.getPoint());
+        String idpeminjaman = jTable1.getValueAt(baris, 0).toString();
+        jTextFieldid.setText(idpeminjaman);
+        
+        String nama = jTable1.getValueAt(baris, 1).toString();
+        jTextFieldnama.setText(nama);
+        
+        String nim = jTable1.getValueAt(baris, 2).toString();
+        jTextFieldnim.setText(nim);
+        
+        String prodi = jTable1.getValueAt(baris, 3).toString();
+        jTextFieldprodi.setText(prodi);
+        
+        String tanggalpinjam= jTable1.getValueAt(baris, 4).toString();
+        jDatepinjam.setDateFormatString(tanggalpinjam);
+        
+        String tanggalkembali = jTable1.getValueAt(baris, 5).toString();
+        jDatekembali.setDateFormatString(tanggalkembali);
+        
+        String judulbuku = jTable1.getValueAt(baris, 6).toString();
+        jTextFieldjudul.setText(judulbuku);
+        
+        String angkatan = jTable1.getValueAt(baris, 7).toString();
+        jTextFieldangkatan.setText(angkatan);
+        
+
+    }//GEN-LAST:event_jTable1MouseClicked
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        String idpeminjaman = jTextFieldid.getText().trim();
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("UASPU");
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        
+        Peminjaman p = em.find(Peminjaman.class, idpeminjaman);
+        
+        em.remove(p);
+        em.getTransaction().commit();
+        // akhir persistence
+
+        jTextFieldid.setText("");
+        kosongkan_form();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTextFieldangkatanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldangkatanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldangkatanActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(List.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(List.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(List.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(List.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Pinjam().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private com.toedter.calendar.JDateChooser jDatekembali;
+    private com.toedter.calendar.JDateChooser jDatepinjam;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextFieldangkatan;
+    private javax.swing.JTextField jTextFieldid;
+    private javax.swing.JTextField jTextFieldjudul;
+    private javax.swing.JTextField jTextFieldnama;
+    private javax.swing.JTextField jTextFieldnim;
+    private javax.swing.JTextField jTextFieldprodi;
+    // End of variables declaration//GEN-END:variables
+}
