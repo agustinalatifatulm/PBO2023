@@ -1,0 +1,140 @@
+NSERT INTO public.skripsi(
+	idskripsi,judul,pengarang,tahun,halaman)
+	VALUES 
+('AS098769','Penerapan Sistem TI','Mr.K','2012','56'),
+('AS097657','Memahamai Konsep Sistem','Mr.L','2013','78'),
+('AS678547','Mengembangkan Perangkat Lunak','Mrs.K','2017','67'),
+('AS098756','Menerapkan Keamanan Jaringan','Mr.H','2018','72'),
+('AS564234','Pengembangan Jaringan Komputer','Mr.Kn','2019','87'),
+('AS452345',Inovasi Baru Keamanan DRP','Mr.Kd','2016','89'),
+('AS675432',Pengembangan Could Computing Bidang Bisnis Makanan','Mr.Jk','2018','90'),
+('AS156432','Development Jaringan dan Sistem TI','Mrs.D','2012','89'),
+('AS157245','Inovasi Berbasis Web Development','Mr.P','2019','67'),
+('AS342567','Memanfaatkan Sistem Keamanan 27001 Bidang Industri Tekstil','Mr.O','2019','78');
+
+INSERT INTO public.skripsi(
+	idskripsi,judul,pengarang,tahun,halaman)
+	VALUES 
+('KP098769','Pengelolaan Sistem TI','Mr.K','2012','56'),
+('KP097657','Mengembangkan Konsep Sistem Informatika','Mr.L','2013','78'),
+('KP678547','Development Perangkat Lunak','Mrs.K','2017','67'),
+('KP098756','Menguji Keamanan Jaringan Komputer','Mr.H','2018','72'),
+('KP564234','Pengembangan Jaringan Komputer Berbasis Web','Mr.Kn','2019','87'),
+('KP452345','Inovasi Baru Keamanan DRP','Mr.Kd','2016','89'),
+('KP675432','Pengembangan Could Computing Bidang Bisnis Industri Tekstil','Mr.Jk','2018','90'),
+('KP156432','Development Jaringan dan Sistem TI Kantor ABC','Mrs.D','2012','89'),
+('KP157245','Inovasi Berbasis Web Development dan Keamanan TI','Mr.P','2019','67'),
+('KP342567','Menerapkan Keamanan DRP Bidang Industri Tekstil','Mr.O','2019','78');
+
+INSERT INTO public.skripsi(
+	idskripsi,judul,pengarang,tahun,halaman)
+	VALUES
+('LK098769','Penerapan Sistem TI','Mr.K','2012','56'),
+('LK097657','Memahamai Konsep Sistem','Mr.L','2013','78'),
+('LK678547','Mengembangkan Perangkat Lunak','Mrs.K','2017','67'),
+('LK098756','Menerapkan Keamanan Jaringan','Mr.H','2018','72'),
+('LK564234','Pengembangan Jaringan Komputer','Mr.Kn','2019','87'),
+('LK452345','Inovasi Baru Keamanan DRP','Mr.Kd','2016','89'),
+('LK675432','Pengembangan Could Computing Bidang Bisnis Makanan','Mr.Jk','2018','90'),
+('LK156432','Development Jaringan dan Sistem TI','Mrs.D','2012','89'),
+('LK157245','Inovasi Berbasis Web Development','Mr.P','2019','67'),
+('LK342567','Memanfaatkan Sistem Keamanan 27001 Bidang Industri Tekstil','Mr.O','2019','78');
+
+INSERT INTO public.skripsi(
+	idskripsi,judul,pengarang,tahun,halaman)
+	VALUES
+('GH098769','Pengelolaan Sistem TI','Mr.K','2012','56'),
+('GH097657','Mengembangkan Konsep Sistem Informatika','Mr.L','2013','78'),
+('GH678547','Development Perangkat Lunak','Mrs.K','2017','67'),
+('GH098756','Menguji Keamanan Jaringan Komputer','Mr.H','2018','72'),
+('GH564234','Pengembangan Jaringan Komputer Berbasis Web','Mr.Kn','2019','87'),
+('GH452345','Inovasi Baru Keamanan DRP','Mr.Kd','2016','89'),
+('GH675432','Pengembangan Could Computing Bidang Bisnis Industri Tekstil','Mr.Jk','2018','90'),
+('GH156432','Development Jaringan dan Sistem TI Kantor ABC','Mrs.D','2012','89'),
+('GH157245','Inovasi Berbasis Web Development dan Keamanan TI','Mr.P','2019','67'),
+('GH342567','Menerapkan Keamanan DRP Bidang Industri Tekstil','Mr.O','2019','78');
+
+INSERT INTO public.skripsi(
+	idskripsi,judul,pengarang,tahun,halaman)
+	VALUES
+('PK098769','Penerapan Sistem TI','Mr.K','2012','56'),
+('PK097657','Memahamai Konsep Sistem','Mr.L','2013','78'),
+('PK678547','Mengembangkan Perangkat Lunak','Mrs.K','2017','67'),
+('PK098756','Menerapkan Keamanan Jaringan','Mr.H','2018','72'),
+('PK564234','Pengembangan Jaringan Komputer','Mr.Kn','2019','87'),
+('PK452345','Inovasi Baru Keamanan DRP','Mr.Kd','2016','89'),
+('PK675432','Pengembangan Could Computing Bidang Bisnis Makanan','Mr.Jk','2018','90'),
+('PK156432','Development Jaringan dan Sistem TI','Mrs.D','2012','89'),
+('PK157245','Inovasi Berbasis Web Development','Mr.P','2019','67'),
+('PK342567','Memanfaatkan Sistem Keamanan 27001 Bidang Industri Tekstil','Mr.O','2019','78');
+
+
+INSERT INTO public.skripsi(
+	idskripsi,judul,pengarang,tahun,halaman)
+	VALUES
+('BU098769','Pengelolaan Sistem TI','Mr.K','2012','56'),
+('BU097657','Mengembangkan Konsep Sistem Informatika','Mr.L','2013','78'),
+('BU678547','Development Perangkat Lunak','Mrs.K','2017','67'),
+('BU098756','Menguji Keamanan Jaringan Komputer','Mr.H','2018','72'),
+('BU564234','Pengembangan Jaringan Komputer Berbasis Web','Mr.Kn','2019','87'),
+('BU452345','Inovasi Baru Keamanan DRP','Mr.Kd','2016','89'),
+('BU675432','Pengembangan Could Computing Bidang Bisnis Industri Tekstil','Mr.Jk','2018','90'),
+('BU156432','Development Jaringan dan Sistem TI Kantor ABC','Mrs.D','2012','89'),
+('BU157245','Inovasi Berbasis Web Development dan Keamanan TI','Mr.P','2019','67'),
+('BU342567','Menerapkan Keamanan DRP Bidang Industri Tekstil','Mr.O','2019','78');
+
+INSERT INTO public.skripsi(
+	idskripsi,judul,pengarang,tahun,halaman)
+	VALUES
+('GJ098769','Penerapan Sistem TI','Mr.K','2012','56'),
+('GJ097657','Memahamai Konsep Sistem','Mr.L','2013','78'),
+('GJ678547','Mengembangkan Perangkat Lunak','Mrs.K','2017','67'),
+('GJ098756','Menerapkan Keamanan Jaringan','Mr.H','2018','72'),
+('GJ564234','Pengembangan Jaringan Komputer','Mr.Kn','2019','87'),
+('GJ452345','Inovasi Baru Keamanan DRP','Mr.Kd','2016','89'),
+('GJ675432','Pengembangan Could Computing Bidang Bisnis Makanan','Mr.Jk','2018','90'),
+('GJ156432','Development Jaringan dan Sistem TI','Mrs.D','2012','89'),
+('GJ157245','Inovasi Berbasis Web Development','Mr.P','2019','67'),
+('GJ342567','Memanfaatkan Sistem Keamanan 27001 Bidang Industri Tekstil','Mr.O','2019','78');
+
+INSERT INTO public.skripsi(
+	idskripsi,judul,pengarang,tahun,halaman)
+	VALUES
+('OP098769','Pengelolaan Sistem TI','Mr.K','2012','56'),
+('OP097657','Mengembangkan Konsep Sistem Informatika','Mr.L','2013','78'),
+('OP678547','Development Perangkat Lunak','Mrs.K','2017','67'),
+('OP098756','Menguji Keamanan Jaringan Komputer','Mr.H','2018','72'),
+('OP564234','Pengembangan Jaringan Komputer Berbasis Web','Mr.Kn','2019','87'),
+('OP452345','Inovasi Baru Keamanan DRP','Mr.Kd','2016','89'),
+('OP675432','Pengembangan Could Computing Bidang Bisnis Industri Tekstil','Mr.Jk','2018','90'),
+('OP156432','Development Jaringan dan Sistem TI Kantor ABC','Mrs.D','2012','89'),
+('OP157245','Inovasi Berbasis Web Development dan Keamanan TI','Mr.P','2019','67'),
+('OP342567','Menerapkan Keamanan DRP Bidang Industri Tekstil','Mr.O','2019','78');
+
+INSERT INTO public.skripsi(
+	idskripsi,judul,pengarang,tahun,halaman)
+	VALUES
+('ZA09A8769','Penerapan Sistem TI','Mr.K','2012','56'),
+('ZA97657','Memahamai Konsep Sistem','Mr.L','2013','78'),
+('ZA78547','Mengembangkan Perangkat Lunak','Mrs.K','2017','67'),
+('ZA98756','Menerapkan Keamanan Jaringan','Mr.H','2018','72'),
+('ZA64234','Pengembangan Jaringan Komputer','Mr.Kn','2019','87'),
+('ZA452345','Inovasi Baru Keamanan DRP','Mr.Kd','2016','89'),
+('ZA675432','Pengembangan Could Computing Bidang Bisnis Makanan','Mr.Jk','2018','90'),
+('ZA156432','Development Jaringan dan Sistem TI','Mrs.D','2012','89'),
+('ZA157245','Inovasi Berbasis Web Development','Mr.P','2019','67'),
+('ZA342567','Memanfaatkan Sistem Keamanan 27001 Bidang Industri Tekstil','Mr.O','2019','78');
+
+INSERT INTO public.skripsi(
+	idskripsi,judul,pengarang,tahun,halaman)
+	VALUES
+('HD098769','Pengelolaan Sistem TI','Mr.K','2012','56'),
+('HD097657','Mengembangkan Konsep Sistem Informatika','Mr.L','2013','78'),
+('HD678547','Development Perangkat Lunak','Mrs.K','2017','67'),
+('HD098756','Menguji Keamanan Jaringan Komputer','Mr.H','2018','72'),
+('HD564234','Pengembangan Jaringan Komputer Berbasis Web','Mr.Kn','2019','87'),
+('HD452345','Inovasi Baru Keamanan DRP','Mr.Kd','2016','89'),
+('HD675432','Pengembangan Could Computing Bidang Bisnis Industri Tekstil','Mr.Jk','2018','90'),
+('HD156432','Development Jaringan dan Sistem TI Kantor ABC','Mrs.D','2012','89'),
+('HD157245','Inovasi Berbasis Web Development dan Keamanan TI','Mr.P','2019','67'),
+('HD342567','Menerapkan Keamanan DRP Bidang Industri Tekstil','Mr.O','2019','78');

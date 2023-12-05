@@ -1,0 +1,135 @@
+INSERT INTO public.peminjamanskripsi(
+	idpeminjaman,nama,nim,prodi,angkatan,tanggalpinjam,tanggalkembali,idskripsi,judulskripsi)
+	VALUES 
+('SK0001', 'Karen', '897682', 'Sistem informasi','2022', '2023-08-09', '2023-08-10', 'AS098769','Penerapan Sistem TI'),
+('SK0002', 'Mutia', '897624', 'Sistem informasi','2022', '2023-09-09', '2023-09-10','AS156432','Development Jaringan dan Sistem TI'),
+('SK0003', 'Luli', '987624', 'Sistem informasi','2021','2023-10-11', '2023-10-15','KP098769','Pengelolaan Sistem TI'),
+('SK0004', 'Kurnia', '987657', 'Sistem informasi','2022', '2023-10-09', '2023-10-10','KP097657','Mengembangkan Konsep Sistem Infromatika'),
+('SK0005', 'Haikal', '897652', 'Sistem informasi','2020', '2023-08-12', '2023-08-13','KP452345','Inovasi Baru Keamanan DRP'),
+('SK0006', 'Ema', '876546', 'Sistem informasi','2022','2023-08-16', '2023-08-17','LK098756','Menerapkan Keamanan Jaringan'),
+('SK0007', 'Keifano', '897656', 'Sistem informasi','2021', '2023-08-10', '2023-08-11','LK452345','Inovasi Baru Keamanan DRP'),
+('SK0008', 'Rayan', '998767', 'Sistem informasi','2020', '2023-08-18', '2023-08-20','GH098769','Pengelolaan Sistem TI'),
+('SK0009', 'Jolia', '256736', 'Sistem informasi','2022', '2023-08-15', '2023-08-17','LK098756','Menerapkan Keamanan Jaringan'),
+('SK0010', 'Hamid', '356728', 'Sistem informasi','2021', '2023-08-12', '2023-08-18','KP157245','Inovasi Berbasis Web Development dan Keamanan TI'),
+('SK0011', 'Ajib', '897654', 'Sistem informasi','2022','2023-08-11', '2023-08-19','KP157245','Inovasi Berbasis Web Development dan Keamanan TI');
+
+INSERT INTO public.peminjamanskripsi(
+	idpeminjaman,nama,nim,prodi,angkatan,tanggalpinjam,tanggalkembali,idskripsi,judulskripsi)
+	VALUES 
+('SK0012', 'Karen', '897682', 'Sistem informasi','2022', '2023-08-09', '2023-08-10', 'AS098769','Penerapan Sistem TI'),
+('SK0013', 'Mutia', '897624', 'Sistem informasi','2022', '2023-09-09', '2023-09-10','AS156432','Development Jaringan dan Sistem TI'),
+('SK0014', 'Luli', '987624', 'Sistem informasi','2021','2023-10-11', '2023-10-15','KP098769','Pengelolaan Sistem TI'),
+('SK0015', 'Kurnia', '987657', 'Sistem informasi','2022', '2023-10-09', '2023-10-10','KP097657','Mengembangkan Konsep Sistem Infromatika'),
+('SK0016', 'Haikal', '897652', 'Sistem informasi','2020', '2023-08-12', '2023-08-13','KP452345','Inovasi Baru Keamanan DRP'),
+('SK0017', 'Ema', '876546', 'Sistem informasi','2022','2023-08-16', '2023-08-17','LK098756','Menerapkan Keamanan Jaringan'),
+('SK0018', 'Keifano', '897656', 'Sistem informasi','2021', '2023-08-10', '2023-08-11','LK452345','Inovasi Baru Keamanan DRP'),
+('SK0019', 'Rayan', '998767', 'Sistem informasi','2020', '2023-08-18', '2023-08-20','GH098769','Pengelolaan Sistem TI'),
+('SK0020', 'Jolia', '256736', 'Sistem informasi','2022', '2023-08-15', '2023-08-17','LK098756','Menerapkan Keamanan Jaringan'),
+('SK0021', 'Hamid', '356728', 'Sistem informasi','2021', '2023-08-12', '2023-08-18','KP157245','Inovasi Berbasis Web Development dan Keamanan TI'),
+('SK0022', 'Ajib', '897654', 'Sistem informasi','2022','2023-08-11', '2023-08-19','LK452345','Pengelolaan Sistem TI');
+
+INSERT INTO public.peminjamanskripsi(
+	idpeminjaman,nama,nim,prodi,angkatan,tanggalpinjam,tanggalkembali,idskripsi,judulskripsi)
+	VALUES 
+('SK0023', 'Karenita', '897682', 'Sistem informasi','2022', '2023-08-09', '2023-08-10', 'AS098769','Penerapan Sistem TI'),
+('SK0024', 'Mutia', '897624', 'Sistem informasi','2022', '2023-09-09', '2023-09-10','AS156432','Development Jaringan dan Sistem TI'),
+('SK0025', 'Lulita', '987624', 'Sistem informasi','2021','2023-10-11', '2023-10-15','KP098769','Pengelolaan Sistem TI'),
+('SK0026', 'Kurnia', '987657', 'Sistem informasi','2022', '2023-10-09', '2023-10-10','KP097657','Mengembangkan Konsep Sistem Infromatika'),
+('SK0027', 'Haikal', '897652', 'Sistem informasi','2020', '2023-08-12', '2023-08-13','KP452345','Inovasi Baru Keamanan DRP'),
+('SK0028', 'Ema', '876546', 'Sistem informasi','2022','2023-08-16', '2023-08-17','LK098756','Menerapkan Keamanan Jaringan'),
+('SK0029', 'Keifano', '897656', 'Sistem informasi','2021', '2023-08-10', '2023-08-11','LK452345','Inovasi Baru Keamanan DRP'),
+('SK0030', 'Rayan', '998767', 'Sistem informasi','2020', '2023-08-18', '2023-08-20','GH098769','Pengelolaan Sistem TI'),
+('SK0031', 'Jolia Rahma', '256736', 'Sistem informasi','2022', '2023-08-15', '2023-08-17','LK098756','Menerapkan Keamanan Jaringan'),
+('SK0032', 'Hamidah', '356728', 'Sistem informasi','2021', '2023-08-12', '2023-08-18','KP157245','Inovasi Berbasis Web Development dan Keamanan TI'),
+('SK0033', 'Ajib', '897654', 'Sistem informasi','2022','2023-08-11', '2023-08-19','KP157245','Inovasi Berbasis Web Development dan Keamanan TI');
+
+
+INSERT INTO public.peminjamanskripsi(
+	idpeminjaman,nama,nim,prodi,angkatan,tanggalpinjam,tanggalkembali,idskripsi,judulskripsi)
+	VALUES 
+('SK0034', 'Koliah', '897682', 'Sistem informasi','2022', '2023-08-09', '2023-08-10', 'AS098769','Penerapan Sistem TI'),
+('SK0035', 'Alya', '897624', 'Sistem informasi','2022', '2023-09-09', '2023-09-10','AS156432','Development Jaringan dan Sistem TI'),
+('SK0036', 'Luli', '987624', 'Sistem informasi','2021','2023-10-11', '2023-10-15','KP098769','Pengelolaan Sistem TI'),
+('SK0037', 'Kurnia', '987657', 'Sistem informasi','2022', '2023-10-09', '2023-10-10','KP097657','Mengembangkan Konsep Sistem Infromatika'),
+('SK0038', 'Haikal', '897652', 'Sistem informasi','2020', '2023-08-12', '2023-08-13','KP452345','Inovasi Baru Keamanan DRP'),
+('SK0039', 'Ema', '876546', 'Sistem informasi','2022','2023-08-16', '2023-08-17','LK098756','Menerapkan Keamanan Jaringan'),
+('SK0040', 'Keifano', '897656', 'Sistem informasi','2021', '2023-08-10', '2023-08-11','LK452345','Inovasi Baru Keamanan DRP'),
+('SK0041', 'Rayan', '998767', 'Sistem informasi','2020', '2023-08-18', '2023-08-20','GH098769','Pengelolaan Sistem TI'),
+('SK0042', 'Jolia', '256736', 'Sistem informasi','2022', '2023-08-15', '2023-08-17','LK098756','Menerapkan Keamanan Jaringan'),
+('SK0043', 'Hamid', '356728', 'Sistem informasi','2021', '2023-08-12', '2023-08-18','KP157245','Inovasi Berbasis Web Development dan Keamanan TI'),
+('SK0044', 'Ajib', '897654', 'Sistem informasi','2022','2023-08-11', '2023-08-19','KP157245','Inovasi Berbasis Web Development dan Keamanan TI');
+
+INSERT INTO public.peminjamanskripsi(
+	idpeminjaman,nama,nim,prodi,angkatan,tanggalpinjam,tanggalkembali,idskripsi,judulskripsi)VALUES 
+('SK0045', 'Karen', '897682', 'Sistem informasi','2022', '2023-08-09', '2023-08-10', 'AS098769','Penerapan Sistem TI'),
+('SK0046', 'Mutia', '897624', 'Sistem informasi','2022', '2023-09-09', '2023-09-10','AS156432','Development Jaringan dan Sistem TI'),
+('SK0047', 'Luli', '987624', 'Sistem informasi','2021','2023-10-11', '2023-10-15','KP098769','Pengelolaan Sistem TI'),
+('SK0048', 'Kurnia', '987657', 'Sistem informasi','2022', '2023-10-09', '2023-10-10','KP097657','Mengembangkan Konsep Sistem Infromatika'),
+('SK0049', 'Haikal', '897652', 'Sistem informasi','2020', '2023-08-12', '2023-08-13','KP452345','Inovasi Baru Keamanan DRP'),
+('SK0050', 'Ema', '876546', 'Sistem informasi','2022','2023-08-16', '2023-08-17','LK098756','Menerapkan Keamanan Jaringan'),
+('SK0051', 'Keifano', '897656', 'Sistem informasi','2021', '2023-08-10', '2023-08-11','LK452345','Inovasi Baru Keamanan DRP'),
+('SK0052', 'Rayan', '998767', 'Sistem informasi','2020', '2023-08-18', '2023-08-20','GH098769','Pengelolaan Sistem TI'),
+('SK0053', 'Jolia', '256736', 'Sistem informasi','2022', '2023-08-15', '2023-08-17','LK098756','Menerapkan Keamanan Jaringan'),
+('SK0054', 'Hamid', '356728', 'Sistem informasi','2021', '2023-08-12', '2023-08-18','KP157245','Inovasi Berbasis Web Development dan Keamanan TI'),
+('SK0055', 'Ajib', '897654', 'Sistem informasi','2022','2023-08-11', '2023-08-19','KP157245','Inovasi Berbasis Web Development dan Keamanan TI');
+
+INSERT INTO public.peminjamanskripsi(
+	idpeminjaman,nama,nim,prodi,angkatan,tanggalpinjam,tanggalkembali,idskripsi,judulskripsi)
+	VALUES 
+('SK0056', 'Karenita', '897682', 'Sistem informasi','2022', '2023-08-09', '2023-08-10', 'AS098769','Penerapan Sistem TI'),
+('SK0057', 'Mutiara', '897624', 'Sistem informasi','2022', '2023-09-09', '2023-09-10','AS156432','Development Jaringan dan Sistem TI'),
+('SK0058', 'Luli', '987624', 'Sistem informasi','2021','2023-10-11', '2023-10-15','KP098769','Pengelolaan Sistem TI'),
+('SK0059', 'Kurnia', '987657', 'Sistem informasi','2022', '2023-10-09', '2023-10-10','KP097657','Mengembangkan Konsep Sistem Infromatika'),
+('SK0060', 'Haikal', '897652', 'Sistem informasi','2020', '2023-08-12', '2023-08-13','KP452345','Inovasi Baru Keamanan DRP'),
+('SK0061', 'Ema', '876546', 'Sistem informasi','2022','2023-08-16', '2023-08-17','LK098756','Menerapkan Keamanan Jaringan'),
+('SK0062', 'Keifano', '897656', 'Sistem informasi','2021', '2023-08-10', '2023-08-11','LK452345','Inovasi Baru Keamanan DRP'),
+('SK0063', 'Rayanza', '998767', 'Sistem informasi','2020', '2023-08-18', '2023-08-20','GH098769','Pengelolaan Sistem TI'),
+('SK0064', 'Jolia', '256736', 'Sistem informasi','2022', '2023-08-15', '2023-08-17','LK098756','Menerapkan Keamanan Jaringan'),
+('SK0065', 'Hamida', '356728', 'Sistem informasi','2021', '2023-08-12', '2023-08-18','KP157245','Inovasi Berbasis Web Development dan Keamanan TI'),
+('SK0066', 'Ajib', '897654', 'Sistem informasi','2022','2023-08-11', '2023-08-19','KP157245','Inovasi Berbasis Web Development dan Keamanan TI');
+
+INSERT INTO public.peminjamanskripsi(
+	idpeminjaman,nama,nim,prodi,angkatan,tanggalpinjam,tanggalkembali,idskripsi,judulskripsi)
+	VALUES 
+('SK0067', 'Mumun', '897682', 'Sistem informasi','2022', '2023-08-09', '2023-08-10', 'AS098769','Penerapan Sistem TI'),
+('SK0068', 'Mutiara', '897624', 'Sistem informasi','2022', '2023-09-09', '2023-09-10','AS156432','Development Jaringan dan Sistem TI'),
+('SK0069', 'Lula', '987624', 'Sistem informasi','2021','2023-10-11', '2023-10-15','KP098769','Pengelolaan Sistem TI'),
+('SK0070', 'Kurniara', '987657', 'Sistem informasi','2022', '2023-10-09', '2023-10-10','KP097657','Mengembangkan Konsep Sistem Infromatika'),
+('SK0071', 'Haikal', '897652', 'Sistem informasi','2020', '2023-08-12', '2023-08-13','KP452345','Inovasi Baru Keamanan DRP'),
+('SK0072', 'Ema', '876546', 'Sistem informasi','2022','2023-08-16', '2023-08-17','LK098756','Menerapkan Keamanan Jaringan'),
+('SK0073', 'Keifano', '897656', 'Sistem informasi','2021', '2023-08-10', '2023-08-11','LK452345','Inovasi Baru Keamanan DRP'),
+('SK0074', 'Rayan', '998767', 'Sistem informasi','2020', '2023-08-18', '2023-08-20','GH098769','Pengelolaan Sistem TI'),
+('SK0075', 'Jolia', '256736', 'Sistem informasi','2022', '2023-08-15', '2023-08-17','LK098756','Menerapkan Keamanan Jaringan'),
+('SK0076', 'Hamid', '356728', 'Sistem informasi','2021', '2023-08-12', '2023-08-18','KP157245','Inovasi Berbasis Web Development dan Keamanan TI'),
+('SK0077', 'Ajib', '897654', 'Sistem informasi','2022','2023-08-11', '2023-08-19','KP157245','Inovasi Berbasis Web Development dan Keamanan TI');
+
+INSERT INTO public.peminjamanskripsi(
+	idpeminjaman,nama,nim,prodi,angkatan,tanggalpinjam,tanggalkembali,idskripsi,judulskripsi)
+	VALUES 
+('SK0078', 'lolita', '897682', 'Sistem informasi','2022', '2023-08-09', '2023-08-10', 'AS098769','Penerapan Sistem TI'),
+('SK0079', 'Mutia', '897624', 'Sistem informasi','2022', '2023-09-09', '2023-09-10','AS156432','Development Jaringan dan Sistem TI'),
+('SK0080', 'Luli', '987624', 'Sistem informasi','2021','2023-10-11', '2023-10-15','KP098769','Pengelolaan Sistem TI'),
+('SK0081', 'Kurnia', '987657', 'Sistem informasi','2022', '2023-10-09', '2023-10-10','KP097657','Mengembangkan Konsep Sistem Infromatika'),
+('SK0082', 'Haikal', '897652', 'Sistem informasi','2020', '2023-08-12', '2023-08-13','KP452345','Inovasi Baru Keamanan DRP'),
+('SK0083', 'Ema', '876546', 'Sistem informasi','2022','2023-08-16', '2023-08-17','LK098756','Menerapkan Keamanan Jaringan'),
+('SK0084', 'Keifano', '897656', 'Sistem informasi','2021', '2023-08-10', '2023-08-11','LK452345','Inovasi Baru Keamanan DRP'),
+('SK0085', 'Rayan', '998767', 'Sistem informasi','2020', '2023-08-18', '2023-08-20','GH098769','Pengelolaan Sistem TI'),
+('SK0086', 'Jolia', '256736', 'Sistem informasi','2022', '2023-08-15', '2023-08-17','LK098756','Menerapkan Keamanan Jaringan'),
+('SK0087', 'Hamid', '356728', 'Sistem informasi','2021', '2023-08-12', '2023-08-18','KP157245','Inovasi Berbasis Web Development dan Keamanan TI'),
+('SK0088', 'Ajib', '897654', 'Sistem informasi','2022','2023-08-11', '2023-08-19','KP157245','Inovasi Berbasis Web Development dan Keamanan TI');
+
+INSERT INTO public.peminjamanskripsi(
+	idpeminjaman,nama,nim,prodi,angkatan,tanggalpinjam,tanggalkembali,idskripsi,judulskripsi)
+	VALUES 
+('SK0089', 'Karen', '897682', 'Sistem informasi','2022', '2023-08-09', '2023-08-10', 'AS098769','Penerapan Sistem TI'),
+('SK0090', 'Mutia', '897624', 'Sistem informasi','2022', '2023-09-09', '2023-09-10','AS156432','Development Jaringan dan Sistem TI'),
+('SK0091', 'Luli', '987624', 'Sistem informasi','2021','2023-10-11', '2023-10-15','KP098769','Pengelolaan Sistem TI'),
+('SK0092', 'Kurniama', '987657', 'Sistem informasi','2022', '2023-10-09', '2023-10-10','KP097657','Mengembangkan Konsep Sistem Infromatika'),
+('SK0093', 'Hakim', '897652', 'Sistem informasi','2020', '2023-08-12', '2023-08-13','KP452345','Inovasi Baru Keamanan DRP'),
+('SK0094', 'Emala', '876546', 'Sistem informasi','2022','2023-08-16', '2023-08-17','LK098756','Menerapkan Keamanan Jaringan'),
+('SK0095', 'Keyla', '897656', 'Sistem informasi','2021', '2023-08-10', '2023-08-11','LK452345','Inovasi Baru Keamanan DRP'),
+('SK0096', 'Rayan', '998767', 'Sistem informasi','2020', '2023-08-18', '2023-08-20','GH098769','Pengelolaan Sistem TI'),
+('SK0097', 'Jolia', '256736', 'Sistem informasi','2022', '2023-08-15', '2023-08-17','LK098756','Menerapkan Keamanan Jaringan'),
+('SK0098', 'Hamid', '356728', 'Sistem informasi','2021', '2023-08-12', '2023-08-18','KP157245','Inovasi Berbasis Web Development dan Keamanan TI'),
+('SK0099', 'Ajib', '897654', 'Sistem informasi','2022','2023-08-11', '2023-08-19','KP157245','Inovasi Berbasis Web Development dan Keamanan TI'),
+('SK0100', 'Rayanza', '998760', 'Sistem informasi','2022', '2023-08-18', '2023-08-20','GH098769','Pengelolaan Sistem TI');

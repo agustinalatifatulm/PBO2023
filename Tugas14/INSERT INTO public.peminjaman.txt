@@ -1,0 +1,139 @@
+INSERT INTO public.peminjaman(
+	idpeminjaman,nama,nim,prodi,tanggalpinjam,tanggalkembali,angkatan,idbuku,judulbuku)
+	VALUES 
+('XC0088', 'Karima', '987678', 'Sistem informasi', '2023-08-09', '2023-08-10', '2021', 'BI112360','Manajemen TI: Implementasi'),
+('XC0089', 'Jovan', '967545', 'Sistem informasi', '2023-09-09', '2023-09-10', '2022', 'BI176789','Design Thinking'),
+('XC0090', 'Luli', '897656', 'Sistem informasi', '2023-10-11', '2023-10-15', '2020', 'BI186574','Responsive Web'),
+('XC0091', 'Kurnia', '976545', 'Sistem informasi', '2023-10-09', '2023-10-10', '2021', 'CU178965','iOS Development'),
+('XC0092', 'Haifa', '976546', 'Sistem informasi', '2023-08-12', '2023-08-13', '2021', 'BI112360','Manajemen TI: Implementasi'),
+('XC0093', 'Ela', '987456', 'Sistem informasi', '2023-08-16', '2023-08-17', '2022', 'DK134567','Analisis Kemanan SI'),
+('XC0094', 'Kemal', '876567', 'Sistem informasi', '2023-08-10', '2023-08-11', '2021', 'FA186574','Responsive Web Design'),
+('XC0095', 'Hago', '987654', 'Sistem informasi', '2023-08-18', '2023-08-20', '2021', 'DK176789','Panduan AWS'),
+('XC0096', 'Malia', '524352', 'Sistem informasi', '2023-08-15', '2023-08-17', '2021', 'FA134567','Analisis Kemanan SI'),
+('XC0097', 'Mila', '987656', 'Sistem informasi', '2023-08-12', '2023-08-18', '2021', 'FA186574','Responsive Web Design'),
+('XC0098', 'Muhammad', '987678', 'Sistem informasi', '2023-08-11', '2023-08-19', '2021', 'GU167567','Kriptografi');
+
+
+INSERT INTO public.peminjaman(
+	idpeminjaman,nama,nim,prodi,tanggalpinjam,tanggalkembali,angkatan,idbuku,judulbuku)
+	VALUES 
+('XC0099', 'Karima', '987678', 'Sistem informasi', '2023-08-09', '2023-08-10', '2021', 'BI112360','Manajemen TI: Implementasi'),
+('XC0100', 'Jovan', '967545', 'Sistem informasi', '2023-09-09', '2023-09-10', '2022', 'BI176789','Design Thinking'),
+('XC0101', 'Luli', '897656', 'Sistem informasi', '2023-10-11', '2023-10-15', '2020', 'BI186574','Responsive Web'),
+('XC0102', 'Kurnia', '976545', 'Sistem informasi', '2023-10-09', '2023-10-10', '2021', 'CU178965','iOS Development'),
+('XC0103', 'Haifa', '976546', 'Sistem informasi', '2023-08-12', '2023-08-13', '2021', 'BI112360','Manajemen TI: Implementasi'),
+('XC0104', 'Ela', '987456', 'Sistem informasi', '2023-08-16', '2023-08-17', '2022', 'DK134567','Analisis Kemanan SI'),
+('XC0105', 'Kemal', '876567', 'Sistem informasi', '2023-08-10', '2023-08-11', '2021', 'FA186574','Responsive Web Design'),
+('XC0106', 'Hago', '987654', 'Sistem informasi', '2023-08-18', '2023-08-20', '2021', 'DK176789','Panduan AWS'),
+('XC0107', 'Malia', '524352', 'Sistem informasi', '2023-08-15', '2023-08-17', '2021', 'FA134567','Analisis Kemanan SI'),
+('XC0108', 'Mila', '987656', 'Sistem informasi', '2023-08-12', '2023-08-18', '2021', 'FA186574','Responsive Web Design'),
+('XC0109', 'Muhammad', '987678', 'Sistem informasi', '2023-08-11', '2023-08-19', '2021', 'GU167567','Kriptografi')
+('XC0110', 'Dila', '987678', 'Sistem informasi', '2023-08-11', '2023-08-19', '2021', 'GU167567','Kriptografi');
+
+INSERT INTO public.peminjaman(
+	idpeminjaman,nama,nim,prodi,tanggalpinjam,tanggalkembali,angkatan,idbuku,judulbuku)
+	VALUES ('XC0011', 'Karima', '987678', 'Sistem informasi', '2023-08-09', '2023-08-10', '2021', 'BI112360','Manajemen TI: Implementasi'),
+    ('XC0012', 'Jovan', '967545', 'Sistem informasi', '2023-09-09', '2023-09-10', '2022', 'BI176789','Design Thinking'),
+('XC0013', 'Luli', '897656', 'Sistem informasi', '2023-10-11', '2023-10-15', '2020', 'BI186574','Responsive Web'),
+('XC0014', 'Kurnia', '976545', 'Sistem informasi', '2023-10-09', '2023-10-10', '2021', 'CU178965','iOS Development'),
+('XC0015', 'Haifa', '976546', 'Sistem informasi', '2023-08-12', '2023-08-13', '2021', 'BI112360','Manajemen TI: Implementasi'),
+('XC0016', 'Ela', '987456', 'Sistem informasi', '2023-08-16', '2023-08-17', '2022', 'DK134567','Analisis Kemanan SI'),
+('XC0017', 'Kemal', '876567', 'Sistem informasi', '2023-08-10', '2023-08-11', '2021', 'DK167567','Kriptografi'),
+('XC0018', 'Hago', '987654', 'Sistem informasi', '2023-08-18', '2023-08-20', '2021', 'DK176789','Panduan AWS'),
+('XC0019', 'Malia', '524352', 'Sistem informasi', '2023-08-15', '2023-08-17', '2021', 'FA134567','Analisis Kemanan SI'),
+('XC0020', 'Mila', '987656', 'Sistem informasi', '2023-08-12', '2023-08-18', '2021', 'FA186574','Responsive Web Design'),
+('XC0021', 'Muhammad', '987678', 'Sistem informasi', '2023-08-11', '2023-08-19', '2021', 'GU167567','Kriptografi');
+
+
+INSERT INTO public.peminjaman(
+	idpeminjaman,nama,nim,prodi,tanggalpinjam,tanggalkembali,angkatan,idbuku,judulbuku)
+	VALUES ('XC0022', 'Karima', '987678', 'Sistem informasi', '2023-08-09', '2023-08-10', '2021', 'BI112360','Manajemen TI: Implementasi'),
+    ('XC0023', 'Jovan', '967545', 'Sistem informasi', '2023-09-09', '2023-09-10', '2022', 'BI176789','Design Thinking'),
+('XC0024', 'Luli', '897656', 'Sistem informasi', '2023-10-11', '2023-10-15', '2020', 'BI186574','Responsive Web'),
+('XC0025', 'Kurnia', '976545', 'Sistem informasi', '2023-10-09', '2023-10-10', '2021', 'CU178965','iOS Development'),
+('XC0026', 'Haifa', '976546', 'Sistem informasi', '2023-08-12', '2023-08-13', '2021', 'BI112360','Manajemen TI: Implementasi'),
+('XC0027', 'Ela', '987456', 'Sistem informasi', '2023-08-16', '2023-08-17', '2022', 'DK134567','Analisis Kemanan SI'),
+('XC0028', 'Kemal', '876567', 'Sistem informasi', '2023-08-10', '2023-08-11', '2021', 'FA186574','Responsive Web Design'),
+('XC0029', 'Hago', '987654', 'Sistem informasi', '2023-08-18', '2023-08-20', '2021', 'DK176789','Panduan AWS'),
+('XC0030', 'Malia', '524352', 'Sistem informasi', '2023-08-15', '2023-08-17', '2021', 'FA134567','Analisis Kemanan SI'),
+('XC0031', 'Mila', '987656', 'Sistem informasi', '2023-08-12', '2023-08-18', '2021', 'FA186574','Responsive Web Design'),
+('XC0032', 'Muhammad', '987678', 'Sistem informasi', '2023-08-11', '2023-08-19', '2021', 'GU167567','Kriptografi');
+
+INSERT INTO public.peminjaman(
+	idpeminjaman,nama,nim,prodi,tanggalpinjam,tanggalkembali,angkatan,idbuku,judulbuku)
+	VALUES 
+('XC0033', 'Karima', '987678', 'Sistem informasi', '2023-08-09', '2023-08-10', '2021', 'BI112360','Manajemen TI: Implementasi'),
+('XC0034', 'Jovan', '967545', 'Sistem informasi', '2023-09-09', '2023-09-10', '2022', 'BI176789','Design Thinking'),
+('XC0035', 'Luli', '897656', 'Sistem informasi', '2023-10-11', '2023-10-15', '2020', 'BI186574','Responsive Web'),
+('XC0036', 'Kurnia', '976545', 'Sistem informasi', '2023-10-09', '2023-10-10', '2021', 'CU178965','iOS Development'),
+('XC0037', 'Haifa', '976546', 'Sistem informasi', '2023-08-12', '2023-08-13', '2021', 'BI112360','Manajemen TI: Implementasi'),
+('XC0038', 'Ela', '987456', 'Sistem informasi', '2023-08-16', '2023-08-17', '2022', 'DK134567','Analisis Kemanan SI'),
+('XC0039', 'Kemal', '876567', 'Sistem informasi', '2023-08-10', '2023-08-11', '2021', 'FA186574','Responsive Web Design'),
+('XC0040', 'Hago', '987654', 'Sistem informasi', '2023-08-18', '2023-08-20', '2021', 'DK176789','Panduan AWS'),
+('XC0041', 'Malia', '524352', 'Sistem informasi', '2023-08-15', '2023-08-17', '2021', 'FA134567','Analisis Kemanan SI'),
+('XC0042', 'Mila', '987656', 'Sistem informasi', '2023-08-12', '2023-08-18', '2021', 'FA186574','Responsive Web Design'),
+('XC0043', 'Muhammad', '987678', 'Sistem informasi', '2023-08-11', '2023-08-19', '2021', 'GU167567','Kriptografi');
+
+
+INSERT INTO public.peminjaman(
+	idpeminjaman,nama,nim,prodi,tanggalpinjam,tanggalkembali,angkatan,idbuku,judulbuku)
+	VALUES
+('XC0044', 'Karima', '987678', 'Sistem informasi', '2023-08-09', '2023-08-10', '2021', 'BI112360','Manajemen TI: Implementasi'),
+('XC0045', 'Jovan', '967545', 'Sistem informasi', '2023-09-09', '2023-09-10', '2022', 'BI176789','Design Thinking'),
+('XC0046', 'Luli', '897656', 'Sistem informasi', '2023-10-11', '2023-10-15', '2020', 'BI186574','Responsive Web'),
+('XC0047', 'Kurnia', '976545', 'Sistem informasi', '2023-10-09', '2023-10-10', '2021', 'CU178965','iOS Development'),
+('XC0048', 'Haifa', '976546', 'Sistem informasi', '2023-08-12', '2023-08-13', '2021', 'BI112360','Manajemen TI: Implementasi'),
+('XC0049', 'Ela', '987456', 'Sistem informasi', '2023-08-16', '2023-08-17', '2022', 'DK134567','Analisis Kemanan SI'),
+('XC0050', 'Kemal', '876567', 'Sistem informasi', '2023-08-10', '2023-08-11', '2021', 'FA186574','Responsive Web Design'),
+('XC0051', 'Hago', '987654', 'Sistem informasi', '2023-08-18', '2023-08-20', '2021', 'DK176789','Panduan AWS'),
+('XC0052', 'Malia', '524352', 'Sistem informasi', '2023-08-15', '2023-08-17', '2021', 'FA134567','Analisis Kemanan SI'),
+('XC0053', 'Mila', '987656', 'Sistem informasi', '2023-08-12', '2023-08-18', '2021', 'FA186574','Responsive Web Design'),
+('XC0054', 'Muhammad', '987678', 'Sistem informasi', '2023-08-11', '2023-08-19', '2021', 'GU167567','Kriptografi');
+
+
+INSERT INTO public.peminjaman(
+	idpeminjaman,nama,nim,prodi,tanggalpinjam,tanggalkembali,angkatan,idbuku,judulbuku)
+	VALUES 
+('XC0055', 'Karima', '987678', 'Sistem informasi', '2023-08-09', '2023-08-10', '2021', 'BI112360','Manajemen TI: Implementasi'),
+('XC0056', 'Jovan', '967545', 'Sistem informasi', '2023-09-09', '2023-09-10', '2022', 'BI176789','Design Thinking'),
+('XC0057', 'Luli', '897656', 'Sistem informasi', '2023-10-11', '2023-10-15', '2020', 'BI186574','Responsive Web'),
+('XC0058', 'Kurnia', '976545', 'Sistem informasi', '2023-10-09', '2023-10-10', '2021', 'CU178965','iOS Development'),
+('XC0059', 'Haifa', '976546', 'Sistem informasi', '2023-08-12', '2023-08-13', '2021', 'BI112360','Manajemen TI: Implementasi'),
+('XC0060', 'Ela', '987456', 'Sistem informasi', '2023-08-16', '2023-08-17', '2022', 'DK134567','Analisis Kemanan SI'),
+('XC0111', 'Kemal', '876567', 'Sistem informasi', '2023-08-10', '2023-08-11', '2021', 'FA186574','Responsive Web Design'),
+('XC0061', 'Hago', '987654', 'Sistem informasi', '2023-08-18', '2023-08-20', '2021', 'DK176789','Panduan AWS'),
+('XC0063', 'Malia', '524352', 'Sistem informasi', '2023-08-15', '2023-08-17', '2021', 'FA134567','Analisis Kemanan SI'),
+('XC0064', 'Mila', '987656', 'Sistem informasi', '2023-08-12', '2023-08-18', '2021', 'FA186574','Responsive Web Design'),
+('XC0065', 'Muhammad', '987678', 'Sistem informasi', '2023-08-11', '2023-08-19', '2021', 'GU167567','Kriptografi');
+
+
+INSERT INTO public.peminjaman(
+	idpeminjaman,nama,nim,prodi,tanggalpinjam,tanggalkembali,angkatan,idbuku,judulbuku)
+	VALUES 
+('XC0066', 'Karima', '987678', 'Sistem informasi', '2023-08-09', '2023-08-10', '2021', 'BI112360','Manajemen TI: Implementasi'),
+('XC0067', 'Jovan', '967545', 'Sistem informasi', '2023-09-09', '2023-09-10', '2022', 'BI176789','Design Thinking'),
+('XC0068', 'Luli', '897656', 'Sistem informasi', '2023-10-11', '2023-10-15', '2020', 'BI186574','Responsive Web'),
+('XC0069', 'Kurnia', '976545', 'Sistem informasi', '2023-10-09', '2023-10-10', '2021', 'CU178965','iOS Development'),
+('XC0070', 'Haifa', '976546', 'Sistem informasi', '2023-08-12', '2023-08-13', '2021', 'BI112360','Manajemen TI: Implementasi'),
+('XC0071', 'Ela', '987456', 'Sistem informasi', '2023-08-16', '2023-08-17', '2022', 'DK134567','Analisis Kemanan SI'),
+('XC0072', 'Kemal', '876567', 'Sistem informasi', '2023-08-10', '2023-08-11', '2021', 'FA186574','Responsive Web Design'),
+('XC0073', 'Hago', '987654', 'Sistem informasi', '2023-08-18', '2023-08-20', '2021', 'DK176789','Panduan AWS'),
+('XC0074', 'Malia', '524352', 'Sistem informasi', '2023-08-15', '2023-08-17', '2021', 'FA134567','Analisis Kemanan SI'),
+('XC0075', 'Mila', '987656', 'Sistem informasi', '2023-08-12', '2023-08-18', '2021', 'FA186574','Responsive Web Design'),
+('XC0076', 'Muhammad', '987678', 'Sistem informasi', '2023-08-11', '2023-08-19', '2021', 'GU167567','Kriptografi');
+
+
+INSERT INTO public.peminjaman(
+	idpeminjaman,nama,nim,prodi,tanggalpinjam,tanggalkembali,angkatan,idbuku,judulbuku)
+	VALUES 
+('XC0077', 'Karima', '987678', 'Sistem informasi', '2023-08-09', '2023-08-10', '2021', 'BI112360','Manajemen TI: Implementasi'),
+('XC0078', 'Jovan', '967545', 'Sistem informasi', '2023-09-09', '2023-09-10', '2022', 'BI176789','Design Thinking'),
+('XC0079', 'Luli', '897656', 'Sistem informasi', '2023-10-11', '2023-10-15', '2020', 'BI186574','Responsive Web'),
+('XC0080', 'Kurnia', '976545', 'Sistem informasi', '2023-10-09', '2023-10-10', '2021', 'CU178965','iOS Development'),
+('XC0081', 'Haifa', '976546', 'Sistem informasi', '2023-08-12', '2023-08-13', '2021', 'BI112360','Manajemen TI: Implementasi'),
+('XC0082', 'Ela', '987456', 'Sistem informasi', '2023-08-16', '2023-08-17', '2022', 'DK134567','Analisis Kemanan SI'),
+('XC0083', 'Kemal', '876567', 'Sistem informasi', '2023-08-10', '2023-08-11', '2021', 'FA186574','Responsive Web Design'),
+('XC0084', 'Hago', '987654', 'Sistem informasi', '2023-08-18', '2023-08-20', '2021', 'DK176789','Panduan AWS'),
+('XC0085', 'Malia', '524352', 'Sistem informasi', '2023-08-15', '2023-08-17', '2021', 'FA134567','Analisis Kemanan SI'),
+('XC0086', 'Mila', '987656', 'Sistem informasi', '2023-08-12', '2023-08-18', '2021', 'FA186574','Responsive Web Design'),
+('XC0087', 'Muhammad', '987678', 'Sistem informasi', '2023-08-11', '2023-08-19', '2021', 'GU167567','Kriptografi');

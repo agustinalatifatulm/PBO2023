@@ -1,0 +1,106 @@
+INSERT INTO public.buku(
+	idbuku,isbn,judul,kategori,pengarang,penerbit,tahun,jumlahhalaman)
+	VALUES
+('BI112360','ISBN08798','Manajemen TI: Implementasi','Bisnis dan Manajemen Infromatika','Mr. Pl','Kopulaga','2015','67'),
+('BI124567','ISBN09786','Linier Programming','Bisnis dan Manajemen Informatika','Mr. Kj','Opula','2012','56'),
+('BI765688','ISBN08798','Manajemen TI: Teori dan aplikasi','Bisnis dan Manajemen Informatika','Mr. X,Gramedika','2012','190'),
+('BI178965','ISBN06456','iOS Manajemen','Pengembangan Aplikasi Mobile','Mrs.J','Gramedia Putra','2011','68'),
+('BI212360','ISBN08798','Manajemen TI: Sistem','Bisnis dan Manajemen Infromatika','Mr. Xr','Gramedika','2013','100'),
+('BI134567','ISBN06787','Manajemen Kemanan TI',' Analisis Keamanan','Mr. Pr','Kopulaga','2015','113'),
+('BI167567','ISBN09876','Memahami DRP','Analisis Keamanan','Mr. Kl','Cocapi','2019','111'),
+('BI176789','ISBN07656','Design Thinking','Pengembangan Web','Mr. Xk','Kokola','2020','90'),
+('BI186574','ISBN06754','Responsive Web','Pengembangan Web','Mr. Gh','Opula','2013','108');
+
+INSERT INTO public.buku(
+	idbuku,isbn,judul,kategori,pengarang,penerbit,tahun,jumlahhalaman)
+	VALUES
+('CU112360','ISBN08798','Manajemen Pengembangan','Bisnis dan Manajemen Infromatika','Mr. Ol','Opuci','2021','116'),
+('CU124567','ISBN09786','Linier Programming','Bisnis dan Manajemen Informatika','Mr. Kj','Opula','2012','56'),
+('CU765688','ISBN08798','Manajemen TI: Teori dan aplikasi','Bisnis dan Manajemen Informatika','Mr. X,Gramedika','2012','190'),
+('CU178965','ISBN06456','iOS Manajemen','Pengembangan Aplikasi Mobile','Mrs.J','Gramedia Putra','2011','68'),
+('CU212360','ISBN08798','Manajemen TI: Sistem','Bisnis dan Manajemen Infromatika','Mr. Xr','Gramedika','2013','100'),
+('CU134567','ISBN06787','Manajemen Kemanan TI',' Analisis Keamanan','Mr. Pr','Kopulaga','2015','113'),
+('CU167567','ISBN09876','Memahami DRP','Analisis Keamanan','Mr. Kl','Cocapi','2019','111'),
+('CU176789','ISBN07656','Design Thinking','Pengembangan Web','Mr. Xk','Kokola','2020','90'),
+('CU186574','ISBN06754','Responsive Web','Pengembangan Web','Mr. Gh','Opula','2013','108');
+
+INSERT INTO public.buku(
+	idbuku,isbn,judul,kategori,pengarang,penerbit,tahun,jumlahhalaman)
+	VALUES
+('DK112360','ISBN08798','Manajemen Pengembangan','Bisnis dan Manajemen Infromatika','Mr. Ol','Opuci','2021','116'),
+('DK124567','ISBN09786','Linier Programming','Bisnis dan Manajemen Informatika','Mr. Kj','Opula','2012','56'),
+('DK765688','ISBN08798','Manajemen TI: Teori dan aplikasi','Bisnis dan Manajemen Informatika','Mr. X,Gramedika','2012','190'),
+('DK178965','ISBN06456','iOS Manajemen','Pengembangan Aplikasi Mobile','Mrs.J','Gramedia Putra','2011','68'),
+('DK212360','ISBN08798','Manajemen TI: Sistem','Bisnis dan Manajemen Infromatika','Mr. Xr','Gramedika','2013','100'),
+('DK134567','ISBN06787','Manajemen Kemanan TI',' Analisis Keamanan','Mr. Pr','Kopulaga','2015','113'),
+('DK167567','ISBN09876','Memahami DRP','Analisis Keamanan','Mr. Kl','Cocapi','2019','111'),
+('DK176789','ISBN07656','Design Thinking','Pengembangan Web','Mr. Xk','Kokola','2020','90'),
+('DK186574','ISBN06754','Responsive Web','Pengembangan Web','Mr. Gh','Opula','2013','108');
+
+
+INSERT INTO public.buku(
+	idbuku,isbn,judul,kategori,pengarang,penerbit,tahun,jumlahhalaman)
+	VALUES
+('FA112360','ISBN08798','Manajemen Pengembangan','Bisnis dan Manajemen Infromatika','Mr. Ol','Opuci','2021','116'),
+('FA124567','ISBN09786','Linier Programming','Bisnis dan Manajemen Informatika','Mr. Kj','Opula','2012','56'),
+('FA765688','ISBN08798','Manajemen TI: Teori dan aplikasi','Bisnis dan Manajemen Informatika','Mr. X,Gramedika','2012','190'),
+('FA178965','ISBN06456','iOS Manajemen','Pengembangan Aplikasi Mobile','Mrs.J','Gramedia Putra','2011','68'),
+('FA212360','ISBN08798','Manajemen TI: Sistem','Bisnis dan Manajemen Infromatika','Mr. Xr','Gramedika','2013','100'),
+('FA134567','ISBN06787','Manajemen Kemanan TI',' Analisis Keamanan','Mr. Pr','Kopulaga','2015','113'),
+('FA167567','ISBN09876','Memahami DRP','Analisis Keamanan','Mr. Kl','Cocapi','2019','111'),
+('FA176789','ISBN07656','Design Thinking','Pengembangan Web','Mr. Xk','Kokola','2020','90'),
+('FA186574','ISBN06754','Responsive Web','Pengembangan Web','Mr. Gh','Opula','2013','108');
+
+INSERT INTO public.buku(
+	idbuku,isbn,judul,kategori,pengarang,penerbit,tahun,jumlahhalaman)
+	VALUES
+('GU112360','ISBN08798','Manajemen Pengembangan','Bisnis dan Manajemen Infromatika','Mr. Ol','Opuci','2021','116'),
+('GU124567','ISBN09786','Linier Programming','Bisnis dan Manajemen Informatika','Mr. Kj','Opula','2012','56'),
+('GU765688','ISBN08798','Manajemen TI: Teori dan aplikasi','Bisnis dan Manajemen Informatika','Mr. X,Gramedika','2012','190'),
+('GU178965','ISBN06456','iOS Manajemen','Pengembangan Aplikasi Mobile','Mrs.J','Gramedia Putra','2011','68'),
+('GU212360','ISBN08798','Manajemen TI: Sistem','Bisnis dan Manajemen Infromatika','Mr. Xr','Gramedika','2013','100'),
+('GU134567','ISBN06787','Manajemen Kemanan TI',' Analisis Keamanan','Mr. Pr','Kopulaga','2015','113'),
+('GU167567','ISBN09876','Memahami DRP','Analisis Keamanan','Mr. Kl','Cocapi','2019','111'),
+('GU176789','ISBN07656','Design Thinking','Pengembangan Web','Mr. Xk','Kokola','2020','90'),
+('GU186574','ISBN06754','Responsive Web','Pengembangan Web','Mr. Gh','Opula','2013','108');
+
+INSERT INTO public.buku(
+	idbuku,isbn,judul,kategori,pengarang,penerbit,tahun,jumlahhalaman)
+	VALUES
+('KR112360','ISBN08798','Manajemen Pengembangan','Bisnis dan Manajemen Infromatika','Mr. Ol','Opuci','2021','116'),
+('KR124567','ISBN09786','Linier Programming','Bisnis dan Manajemen Informatika','Mr. Kj','Opula','2012','56'),
+('KR765688','ISBN08798','Manajemen TI: Teori dan aplikasi','Bisnis dan Manajemen Informatika','Mr. X,Gramedika','2012','190'),
+('KR178965','ISBN06456','iOS Manajemen','Pengembangan Aplikasi Mobile','Mrs.J','Gramedia Putra','2011','68'),
+('KR212360','ISBN08798','Manajemen TI: Sistem','Bisnis dan Manajemen Infromatika','Mr. Xr','Gramedika','2013','100'),
+('KR134567','ISBN06787','Manajemen Kemanan TI',' Analisis Keamanan','Mr. Pr','Kopulaga','2015','113'),
+('KR167567','ISBN09876','Memahami DRP','Analisis Keamanan','Mr. Kl','Cocapi','2019','111'),
+('KR176789','ISBN07656','Design Thinking','Pengembangan Web','Mr. Xk','Kokola','2020','90'),
+('KR186574','ISBN06754','Responsive Web','Pengembangan Web','Mr. Gh','Opula','2013','108');
+
+
+INSERT INTO public.buku(
+	idbuku,isbn,judul,kategori,pengarang,penerbit,tahun,jumlahhalaman)
+	VALUES
+('PO112360','ISBN08798','Manajemen Pengembangan','Bisnis dan Manajemen Infromatika','Mr. Ol','Opuci','2021','116'),
+('PO124567','ISBN09786','Linier Programming','Bisnis dan Manajemen Informatika','Mr. Kj','Opula','2012','56'),
+('PO765688','ISBN08798','Manajemen TI: Teori dan aplikasi','Bisnis dan Manajemen Informatika','Mr. X,Gramedika','2012','190'),
+('PO178965','ISBN06456','iOS Manajemen','Pengembangan Aplikasi Mobile','Mrs.J','Gramedia Putra','2011','68'),
+('PO212360','ISBN08798','Manajemen TI: Sistem','Bisnis dan Manajemen Infromatika','Mr. Xr','Gramedika','2013','100'),
+('PO134567','ISBN06787','Manajemen Kemanan TI',' Analisis Keamanan','Mr. Pr','Kopulaga','2015','113'),
+('PO167567','ISBN09876','Memahami DRP','Analisis Keamanan','Mr. Kl','Cocapi','2019','111'),
+('PO176789','ISBN07656','Design Thinking','Pengembangan Web','Mr. Xk','Kokola','2020','90'),
+('PO186574','ISBN06754','Responsive Web','Pengembangan Web','Mr. Gh','Opula','2013','108');
+
+INSERT INTO public.buku(
+	idbuku,isbn,judul,kategori,pengarang,penerbit,tahun,jumlahhalaman)
+	VALUES
+('WR112360','ISBN08798','Manajemen TI: Teori dan aplikasi','Bisnis dan Manajemen Infromatika','Mr. Ol','Opuci','2021','116'),
+('WR124567','ISBN09786','Android Programming','Bisnis dan Manajemen Informatika','Mr. Kj','Opula','2012','56'),
+('WR765688','ISBN08798','Manajemen TI: Teori dan aplikasi','Bisnis dan Manajemen Informatika','Mr. X,Gramedika','2012','190'),
+('WR178965','ISBN06456','iOS Development','Pengembangan Aplikasi Mobile','Mrs.J','Gramedia Putra','2011','68'),
+('WR212360','ISBN08798','Manajemen TI: Teori dan aplikasi','Bisnis dan Manajemen Infromatika','Mr. Xr','Gramedika','2013','100'),
+('WR134567','ISBN06787','Manajemen Kemanan TI',' Analisis Keamanan','Mr. Pr','Kopulaga','2015','113'),
+('WR167567','ISBN09876','Memahami DRP','Analisis Keamanan','Mr. Kl','Cocapi','2019','111'),
+('WR76789','ISBN07656','Panduan AWS','Cloud Computing','Mr. Xm','Gramedia Putra','2021','100'),
+('WR186574','ISBN06754','Responsive Web','Pengembangan Web','Mr. Xk','Kokola','2013','128');
+
