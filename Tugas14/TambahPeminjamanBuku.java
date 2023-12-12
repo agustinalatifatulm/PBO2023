@@ -629,6 +629,18 @@ public class TambahPeminjamanBuku extends javax.swing.JFrame {
 
         entityManager.getTransaction().commit();
 // akhir persistence
+        if (!idbuku.isEmpty() && !idpeminjaman.isEmpty() && nama.isEmpty() && nim.isEmpty() && prodi.isEmpty() && angkatan.isEmpty() && judulbuku.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Save anda gagal");
+
+            new TambahPeminjamanBuku().setVisible(true);
+            this.dispose();
+
+            kosongkan_form();
+        } else {
+            JOptionPane.showMessageDialog(this, "Save success");
+
+            kosongkan_form();
+        }
 
 // Membersihkan nilai dari komponen GUI
         jTextFieldid.setText("");
@@ -642,7 +654,6 @@ public class TambahPeminjamanBuku extends javax.swing.JFrame {
         jTextFieldangkatan.setText("");
 
         tampil();
-
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -694,7 +705,18 @@ public class TambahPeminjamanBuku extends javax.swing.JFrame {
         em.merge(p);
         em.getTransaction().commit();
 // akhir persistence
+        if (!idbuku.isEmpty() && !idpeminjaman.isEmpty() && nama.isEmpty() && nim.isEmpty() && prodi.isEmpty() && angkatan.isEmpty() && judulbuku.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Update anda gagal");
 
+            new TambahBuku().setVisible(true);
+            this.dispose();
+
+            kosongkan_form();
+        } else {
+            JOptionPane.showMessageDialog(this, "Update success");
+
+            kosongkan_form();
+        }
 // Membersihkan nilai dari komponen GUI
         jTextFieldid.setText("");
         jTextFieldnama.setText("");
@@ -724,7 +746,7 @@ public class TambahPeminjamanBuku extends javax.swing.JFrame {
         String prodi = jTable1.getValueAt(baris, 3).toString();
         jTextFieldprodi.setText(prodi);
 
-        String pinjam = jTable1.getValueAt(baris, 4).toString();
+        String pinjam = jTable1.getValueAt(baris, 7).toString();
         try {
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MMMM-dd");
             java.util.Date d = format.parse(pinjam);
@@ -733,7 +755,7 @@ public class TambahPeminjamanBuku extends javax.swing.JFrame {
             e.printStackTrace(); // Gantilah ini dengan penanganan yang sesuai
         }
 
-        String kembali = jTable1.getValueAt(baris, 5).toString();
+        String kembali = jTable1.getValueAt(baris, 8).toString();
         try {
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MMMM-dd");
             java.util.Date d = format.parse(kembali);
@@ -741,19 +763,20 @@ public class TambahPeminjamanBuku extends javax.swing.JFrame {
         } catch (ParseException e) {
             e.printStackTrace(); // Gantilah ini dengan penanganan yang sesua
         }
+        String idbuku = jTable1.getValueAt(baris, 5).toString();
+        jTextFieldidbuku.setText(idbuku);
 
         String judulbuku = jTable1.getValueAt(baris, 6).toString();
         jTextFieldjudul.setText(judulbuku);
 
-        String angkatan = jTable1.getValueAt(baris, 7).toString();
+        String angkatan = jTable1.getValueAt(baris, 4).toString();
         jTextFieldangkatan.setText(angkatan);
-
 
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        String idpeminjaman = jTextFieldid.getText().trim();
+       String idpeminjaman = jTextFieldid.getText().trim();
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("UASPU");
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
@@ -763,10 +786,12 @@ public class TambahPeminjamanBuku extends javax.swing.JFrame {
         em.remove(p);
         em.getTransaction().commit();
         // akhir persistence
-         if (!idpeminjaman.isEmpty()) {
+
+        // akhir persistence
+        if (!idpeminjaman.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Delete Data Berhasil");
 
-            new TambahBuku().setVisible(true);
+            new TambahPeminjamanBuku().setVisible(true);
             this.dispose();
 
             kosongkan_form();
@@ -775,6 +800,8 @@ public class TambahPeminjamanBuku extends javax.swing.JFrame {
 
             kosongkan_form();
         }
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        model.setRowCount(0);
         jTextFieldid.setText("");
         kosongkan_form();
         tampil();
