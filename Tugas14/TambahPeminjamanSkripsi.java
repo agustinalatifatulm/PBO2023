@@ -548,9 +548,49 @@ public class TambahPeminjamanSkripsi extends javax.swing.JFrame {
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         // TODO add your handling code here
+        int baris = jTable1.rowAtPoint(evt.getPoint());
+        String idpeminjaman = jTable1.getValueAt(baris, 0).toString();
+        jTextFieldid.setText(idpeminjaman);
+
+        String nama = jTable1.getValueAt(baris, 1).toString();
+        jTextFieldnama.setText(nama);
+
+        String nim = jTable1.getValueAt(baris, 2).toString();
+        jTextFieldnim.setText(nim);
+
+        String prodi = jTable1.getValueAt(baris, 3).toString();
+        jTextFieldprodi.setText(prodi);
+
+        String pinjam = jTable1.getValueAt(baris, 7).toString();
+        try {
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MMMM-dd");
+            java.util.Date d = format.parse(pinjam);
+            jDatepinjam.setDate(d);
+        } catch (ParseException e) {
+            e.printStackTrace(); // Gantilah ini dengan penanganan yang sesuai
+        }
+
+        String kembali = jTable1.getValueAt(baris, 8).toString();
+        try {
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MMMM-dd");
+            java.util.Date d = format.parse(kembali);
+            jDatekembali.setDate(d);
+        } catch (ParseException e) {
+            e.printStackTrace(); // Gantilah ini dengan penanganan yang sesua
+        }
+        String idskripsi= jTable1.getValueAt(baris, 5).toString();
+        jTextFieldidskripsi.setText(idskripsi);
+
+        String judulskripsi = jTable1.getValueAt(baris, 6).toString();
+        jTextFieldjudulskripsi.setText(judulskripsi);
+
+        String angkatan = jTable1.getValueAt(baris, 4).toString();
+        jTextFieldangkatan.setText(angkatan);
 
 
     }//GEN-LAST:event_jTable1MouseClicked
+
+    
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -596,6 +636,19 @@ public class TambahPeminjamanSkripsi extends javax.swing.JFrame {
         model.setRowCount(0);
         tampil();
         
+// akhir persistence
+         if (!idskripsi.isEmpty() && !idpeminjaman.isEmpty() && nama.isEmpty() && nim.isEmpty() && prodi.isEmpty() && angkatan.isEmpty() && judulskripsi.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Save anda gagal");
+
+            new TambahPeminjamanSkripsi().setVisible(true);
+            this.dispose();
+
+            kosongkan_form();
+        } else {
+            JOptionPane.showMessageDialog(this, "Save success");
+
+            kosongkan_form();
+        }
 // akhir persistence
        
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -647,6 +700,19 @@ public class TambahPeminjamanSkripsi extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         model.setRowCount(0);
         tampil();
+        
+        if (!idskripsi.isEmpty() && !idpeminjaman.isEmpty() && nama.isEmpty() && nim.isEmpty() && prodi.isEmpty() && angkatan.isEmpty() && judulskripsi.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Update anda gagal");
+
+            new TambahPeminjamanSkripsi().setVisible(true);
+            this.dispose();
+
+            kosongkan_form();
+        } else {
+            JOptionPane.showMessageDialog(this, "Update success");
+
+            kosongkan_form();
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -661,10 +727,19 @@ public class TambahPeminjamanSkripsi extends javax.swing.JFrame {
         em.remove(p);
         em.getTransaction().commit();
         // akhir persistence
+        
+        if (!idpeminjaman.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Delete Data Berhasil");
 
-        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-        model.setRowCount(0);
-        tampil();
+            new TambahPeminjamanBuku().setVisible(true);
+            this.dispose();
+
+            kosongkan_form();
+        } else {
+            JOptionPane.showMessageDialog(this, "Delete Data Gagal");
+
+            kosongkan_form();
+        }
         
         
     }//GEN-LAST:event_jButton3ActionPerformed
