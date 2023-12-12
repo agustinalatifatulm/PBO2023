@@ -1093,7 +1093,7 @@ public class Peminjaman extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        try {
+       try {
             String reportPath = "src/report/reportPeminjamanbukuTerbanyak.jrxml";
             String selection = ((String) jComboBoxbuku.getSelectedItem()).toLowerCase();
             String searchTerm = jTextFieldbuku.getText().trim();
@@ -1167,9 +1167,11 @@ public class Peminjaman extends javax.swing.JFrame {
             Map<String, Object> parameter = new HashMap<>();
             parameter.put("mostFrequentId", mostFrequentId);
             parameter.put("maxCount", maxCount);
-            JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(results);
+            
+            TypedQuery<Peminjaman> queryGetBukuByIdbuku = em.createNamedQuery("Peminjaman.findByidbuku", Peminjaman.class);
+            queryGetBukuByIdbuku.setParameter("idbuku", mostFrequentId);
+            JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(queryGetBukuByIdbuku.getResultList());
             parameter.put("peminjamanDataSource", dataSource);
-
             JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameter, dataSource);
 
             // Show the report
